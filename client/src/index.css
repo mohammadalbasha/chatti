@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #888;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+/* Track */
+/* The scrollbar-track piece of the scrollbar */
+/* This is the background of the scrollbar */
+/* You can style it as desired */
+.scrollbar-track {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+/* Handle */
+/* The scrollbar-thumb piece of the scrollbar */
+/* This is the draggable part of the scrollbar */
+/* You can style it as desired */
+.scrollbar-thumb {
+  background-color: #000;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+/* Styling the scrollbar-thumb when it is hovered */
+/* You can style it as desired */
+.scrollbar-thumb:hover {
+  background-color: #592cac;
+}
+
+/* Firefox specific styles */
+/* Using scrollbar-width and scrollbar-color properties */
+/* to style the scrollbar in Firefox */
+/* Note: These styles will not affect WebKit-based browsers */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #000 #888;
+}

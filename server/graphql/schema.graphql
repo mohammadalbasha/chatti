@@ -1,0 +1,78 @@
+# Return Schemas
+
+scalar Date
+
+type User {
+  name: String!
+  password: String!
+  _id: String!
+}
+
+type Message {
+  message: String
+  sender: String
+  conversation: String
+  createdAt: Date
+}
+
+type Private {
+  id: String
+  _id: String
+  messages: [String]
+  lastUpdate: Date
+  userA: String
+  userB: String
+}
+
+type Public {
+  id: String
+}
+
+type SigninResponse {
+  access_token: String!
+  user: User
+}
+
+union Conversation = Private | Public
+
+type Query {
+  messages(conversation: String): [Message]
+  listUnAddedUsers(args: ListUnAddedUsers): [User]
+}
+
+type Mutation {
+  addMessage(input: AddMessageInput!): Message!
+  signin(input: SigninInput!): SigninResponse
+  addPrivateConversation(input: AddPrivateConversationInput!): Private!
+}
+
+input Pagination {
+  limit: Int
+  skip: Int
+}
+
+input AddMessageInput {
+  message: String!
+  sender: String!
+  conversation: String!
+}
+
+input AddPrivateConversationInput {
+  inviterUser: String!
+  invitedUser: String!
+}
+
+input SigninInput {
+  name: String!
+  password: String!
+}
+
+input ListUnAddedUsers {
+  filter: UserFilter
+  pagination: Pagination
+}
+
+input UserFilter {
+  name: String
+  _id: String
+}

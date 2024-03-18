@@ -1,0 +1,207 @@
+FRONTEND
+
+graphql
+https://www.smashingmagazine.com/2020/07/client-side-graphql-apollo-client-react-apps/
+https://hasura.io/learn/graphql/intro-graphql/graphql-client/
+https://www.smashingmagazine.com/2021/11/graphql-frontend-react-apollo/
+https://www.apollographql.com/docs/react/api/react/hooks/#the-apolloprovider-component
+https://www.apollographql.com/docs/react/api/react/hooks/#the-apolloprovider-component
+https://www.apollographql.com/docs/react/data/queries/
+https://www.apollographql.com/docs/react/networking/authentication/
+https://www.apollographql.com/docs/apollo-server/security/cors/
+
+
+redux
+https://medium.com/@ozantekindev/async-operations-in-redux-with-the-redux-toolkit-thunk-e7d024cbf875
+https://redux-toolkit.js.org/api/createAsyncThunk#type
+https://redux-toolkit.js.org/introduction/why-rtk-is-redux-today
+
+immutable
+https://redux.js.org/usage/structuring-reducers/immutable-update-patterns
+
+router outlet
+https://reactrouter.com/en/main/components/outlet
+https://reactrouter.com/en/main
+
+react hook form
+https://react-hook-form.com/advanced-usage
+https://reactrouter.com/en/main
+https://react-hook-form.com/
+https://react-hook-form.com/
+
+formik
+https://formik.org/docs/overview
+
+tailwind
+https://tailwindcss.com/docs/theme
+https://www.geeksforgeeks.org/how-to-change-style-of-scrollbar-using-tailwind-css/
+
+
+MATERIAL ICONS
+https://fonts.google.com/icons?selected=Material+Icons+Outlined:arrow_forward:&icon.query=ARROW&icon.set=Material+Icons
+
+BACKEND
+
+GRAPHQL
+
+https://www.freecodecamp.org/news/get-started-with-graphql-and-nodejs/
+
+
+https://www.apollographql.com/docs/apollo-server/schema/unions-interfaces/
+https://www.apollographql.com/docs/apollo-server/workflow/generate-types/
+https://www.apollographql.com/docs/apollo-server/data/resolvers
+https://github.com/graphql/graphql-spec/issues/215
+https://medium.com/@premsuryamj/how-to-setup-a-graphql-with-apollo-server-and-express-in-nodejs-d28bfc231163
+https://www.apollographql.com/docs/apollo-server/api/apollo-server/
+https://blog.tericcabrel.com/create-a-graphql-application-with-node-js-and-apollo/
+https://www.apollographql.com/docs/apollo-server/api/express-middleware/
+https://stackoverflow.com/questions/54158775/graphql-schema-query-not-recognizing-passed-input-parameters-in-the-resolver-fun
+
+
+TOP LEVEL AWAIT
+https://www.stefanjudis.com/today-i-learned/top-level-await-is-available-in-node-js-modules/
+
+TYPEORM - POSTGRES
+https://www.google.com/search?client=firefox-b-d&q=define+a+functoin+in+typeorm+class#ip=1
+https://stackoverflow.com/questions/37694987/connecting-to-postgresql-in-a-docker-container-from-outside
+https://typeorm.io/listeners-and-subscribers#beforeinsert
+https://cricketsamya.medium.com/building-a-backend-with-typeorm-and-postgresql-6ff38529c22d
+https://dev.to/ayka_code/using-typeorm-with-postgresql-in-a-nodejs-and-express-application-4gma
+https://blog.logrocket.com/crud-rest-api-node-js-express-postgresql/
+https://medium.com/hackernoon/enforcing-a-single-web-socket-connection-per-user-with-node-js-socket-io-and-redis-65f9eb57f66a
+
+DOCKER PASSWORD AND USERNAME , POSTGRES, MONGO
+
+
+{
+
+name: "mohmmad",
+converations: [
+('65c0e01e55ab5d63bd88cafd')]}} 
+"65ce11bf10e815d156ad5732",
+"65ce11bf10e815d156ad5733"
+]}
+
+{conversations:ObjectId('65c0e01e55ab5d63bd88cafd')}// true
+{conversations: {$in: [ObjectId('65c0e01e55ab5d63bd88cafd')]}} // true 
+
+
+هدول رح يكونو صح اذا احد عناصر الشرط موجودين ضمن المصفوفة
+{conversations: {$in: [ObjectId('65c0e01e55ab5d63bd88cafd'), ObjectId('65c0e01e55ab5d63bd88crdt')]}} // true 
+{$or: [{conversations: ObjectId('65c0e01e55ab5d63bd88cafd')}, {conversations: ObjectId('65c0e01e55ab5d63bd88caf2')}]} //true
+
+
+هاد رح يكون صح اذا كل عناصر الشرط موجودين ضمن المصفوفة حتى لو بغير ترتيب بس ممكن المصفوفة تحوي عناصر اخرى 
+{conversations: {$all:[ObjectId('65c0e01e55ab5d63bd88cafd'), ObjectId('65ce11bf10e815d156ad5731'), ObjectId('65ce11c510e815d156ad5732')]}}
+{conversations: {$all:[ObjectId('65c0e01e55ab5d63bd88cafd'), ObjectId('65ce11bf10e815d156ad5731')]}}
+
+هيك مع اضافة الحجم حليت المشكلة
+{conversations: {$size:3,$all:[ObjectId('65c0e01e55ab5d63bd88cafd'), ObjectId('65ce11bf10e815d156ad5731'), ObjectId('65ce11c510e815d156ad5732')]}}
+
+
+he $elemMatch operator in MongoDB is used to query documents that contain arrays and to specify criteria for matching elements within those arrays. It is particularly useful when you want to match documents based on multiple conditions on the elements of an array.
+
+Here are some common use cases of the $elemMatch operator:
+
+    Matching documents with arrays: If you have documents that contain arrays, you can use $elemMatch to find documents where at least one element of the array matches the specified conditions. This is useful when you want to filter documents based on the contents of their arrays.
+
+    Querying nested arrays: MongoDB allows you to have nested arrays within documents. In such cases, $elemMatch can be used to query specific elements within the nested arrays, applying conditions to multiple levels of nesting.
+
+    Matching on multiple conditions: $elemMatch allows you to specify multiple conditions on the elements of an array, ensuring that all the conditions are satisfied by a single array element. This is useful when you need to find an array element that meets specific criteria, such as matching multiple fields simultaneously.
+
+    Filtering arrays: $elemMatch can be used to filter arrays based on specific criteria. For example, you can use it to find documents where an array contains elements that satisfy certain conditions, while ignoring other elements in the array that do not match the criteria.
+
+Overall, the $elemMatch operator provides a flexible way to query and filter documents based on the contents of arrays, allowing you to perform more complex and fine-grained searches.
+
+
+{
+  "_id": ObjectId("601234567890abcdef123456"),
+  "name": "Product ABC",
+  "reviews": [
+    { "rating": 4, "reviewer": "John" },
+    { "rating": 5, "reviewer": "Alice" },
+    { "rating": 3, "reviewer": "Bob" }
+  ]
+}
+
+
+
+db.products.find({
+  "reviews": {
+    $elemMatch: {
+      "rating": { $gt: 4 },
+      "reviewer": "Alice"
+    }
+  }
+})
+
+
+
+// Get the conversation IDs from the current user
+const conversationIDs = currentUser.conversations;
+
+// Find users who are not the current user and whose conversations are not in conversationIDs
+const usersWithoutConversations = await User.find({
+  _id: { $ne: currentUserID },
+  conversations: { $nin: conversationIDs }
+});
+
+console.log(usersWithoutConversations);
+
+
+
+////
+
+const User = require('./models/User');
+
+// Assuming you have the current user's ID
+const currentUserID = 'your_current_user_id';
+
+const findUsersWithoutConversations = async () => {
+  try {
+    const usersWithoutConversations = await User.aggregate([
+      // Match users who are not the current user
+      { $match: { _id: { $ne: currentUserID } } },
+      
+      // Lookup conversations for each user
+      {
+        $lookup: {
+          from: 'conversations',
+          let: { user_id: '$_id' },
+          pipeline: [
+            {
+              $match: {
+                $expr: {
+                  $or: [
+                    { $eq: ['$userA', '$$user_id'] },
+                    { $eq: ['$userB', '$$user_id'] }
+                  ]
+                }
+              }
+            },
+            { $project: { _id: 1 } }
+          ],
+          as: 'conversations'
+        }
+      },
+      
+      // Filter users who have no conversations
+      { $match: { conversations: [] } }
+    ]);
+
+    console.log(usersWithoutConversations);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+findUsersWithoutConversations();
+
+////
+
+
+// Create an index on the conversations field
+User.collection.createIndex({ conversations: 1 });
+
+
+
